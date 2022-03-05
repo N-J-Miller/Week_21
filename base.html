@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - API-App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        nav {background-color: #8d8d8f;}
+        nav a {
+            color: #160953;
+            font-family: Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 2.5em;
+            margin-left: 40px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('hello') }}">Home</a>
+        <a href="{{ url_for('nobel_all') }}">Nobel json Data</a>
+        <a href="{{ url_for('form_func') }}">Add Prize Data</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

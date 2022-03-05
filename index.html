@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    h1 {
+        color: #720880;
+        margin-left: 25px;
+        font-family: Verdana, sans-serif;
+        text-decoration: none;
+    }
+    h2 {
+        color: #2a75a7;
+        margin-left: 25px;
+        font-family: Verdana, sans-serif;
+        text-decoration: none;
+    }
+    h3 {
+        color: #070707;
+        margin-left: 25px;
+        font-family: Verdana, sans-serif;
+        text-decoration: none;
+    }
+    p {
+        color: #661953;
+        margin-left: 25px;
+        font-size: 2em;
+        font-family: Verdana, sans-serif;
+        text-decoration: underline;
+    }
+</style>
+    <h1>{% block title %} Hello, World! {% endblock %}</h1>
+    <h2>Welcome to Nik's Nobel API App!</h2>
+    <p>{{ data }}</p>
+    <h3>{{ timestamp }}</h3>
+
+    <h2> Use the Navigation Bar to access different API end points,
+        or format as follows:
+    </h2>
+    <h2><code>/all</code> will take you to Nobel Prize Data for all years in json format.
+    </h2>
+    <h2>adding a / then a year from 1901 to 2020 to the end of the url will return data for that year.
+    </h2>
+    <h2><code>/add</code> will allow you to complete a form and add your own Nobel Prize data, by year, to the API.
+    </h2>
+{% endblock %}
+

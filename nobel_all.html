@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Nobel Prize Data {% endblock %}</h1>
+<p>The following is information about every Nobel Prize given in the years 1901-2020, in json format.</p>
+<div class="container">
+
+  <div class="jumbotron text-center">
+    <!-- Render our data -->
+    <p>{{ data }}</p>
+        
+  </div>
+
+</div>
+{% endblock %}
